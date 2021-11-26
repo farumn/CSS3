@@ -1,0 +1,276 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS ClearFix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/* Font */
+@font-face {
+    font-family: "aleo";
+    src: url(font/Aleo-Regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "aleo";
+    src: url(font/Aleo-Italic-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: italic,oblique;
+}
+
+@font-face {
+    font-family: "aleo";
+    src: url(font/Aleo-Light-webfont.woff) format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "aleo";
+    src: url(font/Aleo-LightItalic-webfont.woff) format('woff');
+    font-weight: lighter;
+    font-style: italic,oblique;
+}
+
+@font-face {
+    font-family: "aleo";
+    src: url(font/Aleo-Bold-webfont.woff) format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "aleo";
+    src: url(font/Aleo-BoldItalic-webfont.woff) format('woff');
+    font-weight: bold;
+    font-style: italic,oblique;
+}
+
+/* Style CSS */
+body {
+    font: 18px/36px "aleo",'arial narrow',arial,sans-serif;
+    background-color: lightgrey;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px white;
+}
+
+.container {
+    width: 900px;
+    background-color: white;
+    margin: auto;
+    padding: 25px;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    border: 5px solid grey;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+
+.gallery li,
+.gallery li a img,
+.gallery li a span {
+    border-radius: 50%;
+}
+
+.gallery li span{
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(199, 199, 199, 0.5);
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    line-height: 120px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    opacity: 0%;
+    transform: scale(0) rotate(0);
+    transition: 0.3s ease-out 0s;
+}
+
+.gallery li a:hover span{
+    opacity: 100%;
+    transform: scale(1) rotate(360deg);
+    transition: 0.3s ease-out 0.5s;
+}
+
+/* overlay */
+.overlay {
+    position: fixed;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 100;
+    transition: 0.4s;
+    text-align: center;
+    padding: 60px 0px;
+}
+
+.overlay:target{
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: auto;
+    width: auto;
+}
+
+.overlay img {
+    height: 100%;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+.overlay:target img {
+    animation: fade 0.6s;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 18px;
+    left: 67%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 26px;
+    padding: 6px 10px;
+    opacity: 0%;
+    font-size: 30px;
+    background-color: grey;
+    border-radius: 50%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.overlay:target .close {
+    animation: slideDownfade 0.5s 0.5s forwards;
+}
+
+.next, .prev {
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/next@2x.png);
+    position: absolute;
+    text-indent: -99999px;
+    top: 40%;
+    margin-left: 30px;
+    opacity: 0;
+}
+
+.prev {
+    background-image: url(../img/prev@2x.png);
+    margin-left: -140px;
+}
+
+.overlay:target .next, .overlay:target .prev {
+    animation: fade 0.5s 0.5s forwards;
+}
+
+
+
+/* animasi */
+@keyframes zoom_fade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDownfade {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}

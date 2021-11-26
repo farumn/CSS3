@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Shadow</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        h1 {
+            font-size: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        div {
+            height: 200px;
+            box-sizing: border-box;
+            margin: auto 120px;
+            line-height: 190px;
+        }
+        .satu { 
+            color: white;
+            text-shadow: 0px 0px 10px rgba(241, 255, 51, 0.897);
+        }
+        .dua {
+            color: rgba(0, 0, 0, 0.863);
+            text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.74);
+            background-color: grey;
+        }
+        .tiga {
+            color: rgba(0, 192, 199, 0.829);
+            background-color: rgb(200, 255, 255);
+            text-shadow: 1px 4px 6px #def,
+                         0px 0px 0px #000,
+                         1px 4px 6px #def;			     
+        }
+        .empat {
+            background-color: cornsilk;
+            color: rgb(46, 46, 46);
+            text-shadow: 0px 0px 0px #def,
+                         4px 4px 0px #def,
+                         8px 8px 0px lightgray;
+        }
+        .lima {
+            background-color: aqua;
+            color: white;
+            text-shadow: -6px  0px rgb(0, 132, 255),
+                         -12px 0px rgb(0, 65, 187),
+                         -18px 0px rgb(0, 33, 63);
+        }
+        .enam {
+            background-color: rgb(85, 146, 82);
+            color: rgb(37, 37, 37);
+            text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.281),
+                         4px 6px 4px rgba(70, 70, 70, 0.712);
+        }
+        .tujuh {
+            color: white;
+            text-shadow: 0px 0px 10px white,
+                         0px 0px 20px white,
+                         0px 0px 30px white,
+                         0px 0px 40px purple,
+                         0px 0px 70px purple,
+                         0px 0px 80px purple,
+                         0px 0px 100px purple,
+                         0px 0px 150px purple;
+        }
+        .delapan {
+            color: white;
+            text-shadow: 0px 0px 20px white,
+                         0px -10px 30px white,
+                         0px -20px 40px orange,
+                         0px -30px 50px orangered,
+                         0px -40px 60px orangered,
+                         0px -50px 70px red;
+        }
+        .sembilan {
+            color: white;
+            background-color: rgb(0, 137, 179);
+            text-shadow: 0px 6px 1px rgba(235, 235, 235, 0.651),
+                         0px 12px 10px rgba(0, 0, 0, 0.274);
+        }
+        .sepuluh {
+            color: white;
+            background-color: rgb(89, 0, 255);
+            font-style: italic;
+            font-family: georgia;
+            text-shadow: -7px 6px 0px rgb(89, 0, 255),
+                         -15px 12px 0px rgba(0, 0, 0, 0.651);
+
+        }
+        .sebelas {
+            color: rgb(37, 37, 37);
+            background-color: white;
+            text-shadow: 0 1px rgb(128, 141, 147),
+                         -1px 0px rgb(205, 210, 213),
+                         -1px 2px rgb(128, 141, 147),
+                         -2px 1px rgb(205, 210, 213),
+                         -2px 3px rgb(128, 141, 147),
+                         -3px 2px rgb(205, 210, 213),
+                         -3px 4px rgb(128, 141, 147),
+                         -4px 3px rgb(205, 210, 213),
+                         -4px 5px rgb(128, 141, 147),
+                         -5px 4px rgb(205, 210, 213),
+                         -5px 6px rgb(128, 141, 147),
+                         -6px 5px rgb(205, 210, 213),
+                         -6px 7px rgb(128, 141, 147),
+                         -7px 6px rgb(205, 210, 213);
+        }
+        .duabelas {
+            color:rgb(92, 138, 175);
+            background-color: rebeccapurple;
+            text-shadow:  0px  0px  0px rgb(89, 134, 172),
+                          1px  1px  0px rgb(86, 131, 168),
+                          2px  2px  0px rgb(79, 124, 160),
+                          3px  3px  0px rgb(73, 118, 155),
+                          4px  4px  0px rgb(64, 107, 143),
+                          5px  5px  0px rgb(59, 100, 134),
+                          6px  6px  0px rgb(53, 94, 128),
+                          7px  7px  0px rgb(44, 80, 109),
+                          8px  8px  0px rgb(32, 61, 85),
+                          9px  9px  0px rgb(23, 47, 66),
+                         10px 10px  0px rgb(11, 26, 37),
+                         11px 11px  0px rgb(6, 15, 22),
+                         12px 12px 12px rgb(2, 5, 7);
+        }
+    </style>
+</head>
+<body>
+    <div class="satu">
+        <h1>Hello World</h1>
+    </div>
+    <div class="dua">
+        <h1>Hello World</h1>
+    </div>
+    <div class="tiga">
+        <h1>Hello World</h1>
+    </div>
+    <div class="empat">
+        <h1>Hello World</h1>
+    </div>
+    <div class="lima">
+        <h1>Hello World</h1>
+    </div>
+    <div class="enam">
+        <h1>Hello World</h1>
+    </div>
+    <div class="tujuh">
+        <h1>Hello World</h1>
+    </div>
+    <div class="delapan">
+        <h1>Hello World</h1>
+    </div>
+    <div class="sembilan">
+        <h1>Hello World</h1>
+    </div>
+    <div class="sepuluh">
+        <h1>Hello World</h1>
+    </div>
+    <div class="sebelas">
+        <h1>Hello World</h1>
+    </div>
+    <div class="duabelas">
+        <h1>Hello World</h1>
+    </div>
+</body>
+</html>
